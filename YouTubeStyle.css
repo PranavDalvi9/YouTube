@@ -1,0 +1,237 @@
+#MainCont{
+    margin: 0px;
+    background-color: black;
+}
+#updown{
+display: flex;
+/* gap: 2%; */
+/* flex-direction: row; */
+background-color: #202020;
+height: 10%;
+width: 100%;
+position: fixed;
+margin: 0px;
+/* z-index: auto; */
+}
+#side{
+display: flex;
+padding-top: 5%;
+}
+#one1{
+background-color: sienna;
+height: 1000px;
+width: 7%;
+/* font-size: 100%; */
+position: fixed;
+}
+#two1{
+width: 100%;
+height: 2000px;
+margin-left: 7%;
+/* padding-top: 4%; */
+background-color: springgreen;
+/* z-index: inherit; */
+}
+#suggest{
+width: 100%;
+background-color: #202020;
+height: 3%;
+/* position: fixed; */
+display: flex;
+/* gap: 1%; */
+/* z-index: inherit; */
+}
+#disCont{
+padding-top: 6%;
+display: grid;
+grid-template-columns: repeat(4,25%);
+
+}
+#disCont>div{
+padding: 3%;
+}
+
+
+
+
+/* suggest start */
+
+#suggest>button{
+    padding: auto;
+    border-radius: 20px;
+    height: 60%;
+    font-size: 105%;
+background-color: #373737;
+border:solid rgb(189, 189, 189) 1px;
+color: whitesmoke;
+margin-top: 1%;
+margin-left: 1%;
+}
+
+#suggest>button:hover{
+    background-color: white;
+    color: black;
+}
+
+
+#leftNavBar{
+    width: 100%;
+    height: 100%;
+    background-color: #202020;
+    display: flex;
+    flex-direction: column;
+}
+#leftNavBar>button{
+    /* width: 8%; */
+    width: 70%;
+    height: 70px;
+    margin-top: 9%;
+    /* background-color: transparent; */
+    border: transparent;
+    margin-left: 10%;
+    /* padding-left: 19%; */
+}
+
+#leftNavBar>button:hover{
+    background-color: #373737;
+    width: 90%;
+}
+
+
+/* Explore Icon */
+.fa-compass{
+    color: white;
+}
+/* Text of left icon */
+p{
+    color: white;
+    text-align: center;
+    font-size: 80%;
+    font-weight: lighter;
+}
+
+
+/* suggest end */
+#YouTubeMenuNav{
+    /* height: 70%; */
+    /* margin-top: 4px; */
+    margin-left: 2%;
+}
+#YouTubeIcon{
+  /* background-color: brown; */
+  margin-right: 4%;
+  margin-left: 2%;
+  /* height: 80%; */
+}
+
+button{
+  background-color:#202020 ;
+  border: transparent;
+}
+
+#nameSearch{
+    width: 54%;
+    height: 80%;
+    font-size: 100%;
+    font-weight: bold;
+    margin-top: 1px;
+    background-color: black;
+    border: transparent;
+}
+
+#search{
+    margin-left: -3%;
+    height: 85%;
+    width: 4%;
+    background-color: #313131;
+    margin-top: 0px;
+}
+
+#micPhone{
+    /* margin-top: 8px; */
+    margin-left: 5px;
+    background-color: black;
+    margin-bottom: 0px;
+    width: 3%;
+    height: 87%;
+    border-radius: 50%;
+}
+
+#addIconYouTube{
+    margin-left: 5%;
+    height: 100%;
+}
+
+#appsYO{
+    margin-left: 1%;
+}
+
+#bellYouTube{
+    margin-left: 1%;
+}
+
+#profile{
+    margin-left: 1%;
+    border-radius: 50%;
+    width: 4%;
+    height: 89%;
+    background-color: tomato;
+}
+.fa-youtube{
+    color: red;
+}
+span{
+    color: whitesmoke;
+    font-size: 170%;
+    font-weight: bolder;
+}
+.fa-bars{
+color: whitesmoke;
+}
+.fa-search{
+color: whitesmoke;
+}
+.fa-microphone{
+color: whitesmoke;
+}
+.fa-plus-square{
+color: whitesmoke;
+}
+.fa-th{
+color: whitesmoke;
+}
+.fa-bell{
+color: whitesmoke;
+}
+
+/* navbar start */
+#YouTubeApps{
+    display: none;
+    position: fixed;
+    right: 70px;
+    width: 200px;
+    height: auto;
+    background-color: rgb(26, 25, 25);
+    /* font-size: 30px; */
+    font-weight: bold;
+    text-align: center;
+    padding: 1%;
+    /* opacity: 0.5; */
+}
+
+#logProfile{
+    /* display: flex;
+    flex-direction: column; */
+    /* display: none; */
+    visibility: hidden;
+    position: absolute;
+    width: 180px;
+    height: 200px;
+    right: 28px;
+    top: 44px;
+    background-color: burlywood;
+    padding: 3%;
+    z-index: 1000;
+    opacity: 0;
+}
+/* navbar end */

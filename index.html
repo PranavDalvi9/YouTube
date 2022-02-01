@@ -1,0 +1,1098 @@
+<!-- <!DOCTYPE html> -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/50c60b4afa.js" crossorigin="anonymous"></script>
+</head>
+
+<style>
+    #fixedNav{
+        /* border: 4px solid black; */
+        position: fixed;
+        width: 99%;
+    }
+    #navBarCons{
+        width: 100%;
+        height: 65px;
+        background-color: #202020;
+        display: flex;
+        /* justify-content: space-between; */
+    }
+
+    #MenuNav{
+        margin-top: 18px;
+        margin-left: 30px;
+    }
+    .fa-bars{
+        color: whitesmoke;
+    }
+
+    .fa-youtube{
+        color: red;
+    }
+
+    #LogoNav{
+        margin-top: 16px;
+        margin-left: 35px;
+    }
+    span{
+        color: white;
+        font-weight: lighter;
+        font-size: 25px;
+        font-family: sans-serif;
+    }
+
+    #searchBar>input{
+        width: 700px;
+        height: 60%;
+        margin-top: 10px;
+        margin-left: 90px;
+        background-color: #121212;
+        border: transparent;
+        font-weight: bolder;
+        font-size: 18px;
+    }
+
+    #searchLogo{
+        /* background-color: peru; */
+        width: 30px;
+        height: 35px;
+        /* height: 60%; */
+        margin-left: -30px;
+        margin-top: 24px;
+        /* background-color: whitesmoke; */
+    }
+    #nameSearch{
+        color: whitesmoke;
+    }
+    .fa-search{
+        color: whitesmoke;
+    }
+
+    #MicroLogo{
+        margin-top: 22px;
+        margin-left: 13px;
+    }
+    .fa-microphone{
+        color: whitesmoke;
+    }
+
+    #addLogo{
+        margin-top: 17px;
+        margin-left: 120px;
+    }
+    .fa-plus-square{
+        color: whitesmoke;
+    }
+
+    #appsLogo{
+        margin-top: 17px;
+        margin-left: 25px;
+    }
+    .fa-th{
+        color: whitesmoke;
+    }
+
+    #bellIcon{
+        margin-top: 17px;
+        margin-left: 25px;
+    }
+    .fa-bell{
+        color: whitesmoke;
+    }
+
+    #profileLogo{
+        width: 40px;
+        height: 70%;
+        border-radius: 50%;
+        margin-top: 8px;
+        margin-left: 25px;
+        font-size: 33px;
+    }
+
+
+
+    #SuggestNav{
+        width: 100%;
+        height: 64px;;
+        background-color: #202020;
+    }
+
+    #SuggestNav>button{
+        border: transparent;
+        height: 42px;
+        border-radius: 20px;
+        margin-left: 10px;
+        margin-top: 8px;
+        background-color: #313131;
+        color: whitesmoke;
+        font-size: 18px;
+    }
+    #SuggestNav>button:nth-child(1){
+        margin-left: 119px;
+        background-color: whitesmoke;
+        color: #313131;
+    }
+    #SuggestNav>button:hover{
+        background-color:#524f4f ;
+    }
+    
+
+
+    #downDiv{
+        display: flex;
+        background-color: #202020;
+        /* border: 2px solid palevioletred; */
+        padding-top: 9%;
+    }
+    #leftNav{
+        /* height: 100%; */
+        /* background-color: brown; */
+        position: fixed;
+        height: auto;
+        width: 8%;
+        margin-top: -30px;
+    }
+
+    #leftNav>div>p{
+        color: whitesmoke;
+        font-size: 15px;
+    }
+
+    .fa-compass{
+        color: whitesmoke;
+    }
+
+    #leftNav>div{
+        margin-left: 25px;
+    }
+
+    #leftNav>div:hover{
+        background-color: #313131;
+        margin-left: 0px;
+    }
+
+
+    #ContDisplay{
+        height: auto;
+        background-color: #181818;
+        width: 100%;
+        margin-left: 8%;
+        display: grid;
+        grid-template-columns: repeat(4,auto);
+        gap: 1%;
+    }
+    #ContDisplay>div{
+        height: 320px;
+        width: 95%;
+        /* background-color: yellow; */
+    }
+    #ContDisplay>div>p{
+        color: whitesmoke;
+    }
+    #ContDisplay>div>p:nth-child(3){
+        /* background-color: violet; */
+        color: #aaaaaa;
+        padding-left: 5%;
+        font-size: 12px;
+        font-weight: bold;
+    }
+    #ContDisplay>div>p:nth-child(2){
+        /* background-color: violet; */
+        padding-left: 5%;
+        font-size: 15px;
+        font-weight: bolder;
+    }
+
+
+    #logProfile{
+        display: flex;
+        flex-direction: column;
+        display: none;
+        position: fixed;
+        width: 180px;
+        height: 200px;
+        margin-right: 55px;
+        margin-top: -35px;
+        background-color: burlywood;
+        padding: 3%;
+    }
+
+    /* login submit */
+    .subClos{
+        background-color: black;
+        color: whitesmoke;
+    }
+
+    #logProfile{
+        display: flex;
+        flex-direction: column;
+        display: none;
+        position: fixed;
+        width: 180px;
+        height: 200px;
+        right: 28px;
+        top: 44px;
+        background-color: burlywood;
+        padding: 3%;
+    }
+
+    #uploadClick>div{
+        display: flex;
+        background-color: #202020;
+        width: 200px;
+        height:50px;
+        padding: 1%;
+    }
+    #uploadClick>div:hover{
+        background-color: #313131;
+    }
+    #uploadClick>div>p{
+        margin-left: 16%;
+        color: whitesmoke;
+        font-weight: bold;
+        font-size: 18px;
+    }
+    .fa-youtube-square{
+        color: whitesmoke;
+    }
+
+    #uploadClick{
+        display: none;
+        position: fixed;
+        right: 30px;
+        top: 70px;
+        background-color: burlywood;
+    }
+
+
+
+
+    #MoreAppsHide>div{
+        display: flex;
+    }
+    #MoreAppsHide>div:hover{
+        background-color: #313131;
+        margin-top: 0px;
+    }
+    #MoreAppsHide>div>p{
+        font-size: 14px;
+        margin-top: -1px;
+        margin-left: 25px;
+        color: whitesmoke;
+    }
+    #MoreAppsHide>div>i{
+        margin-left: 13px;
+    }
+    .fa-tv,.fa-youtube-square,.fa-play-circle,.fa-youtube{
+        color: red;
+    }
+    #MoreAppsHide>hr{
+        border: 1px solid whitesmoke;
+        /* width: 350px; */
+        margin-left: 0px;
+    }
+    #MoreAppsHide{
+        display: none;
+       background-color: #202325;
+       width: 190px;
+       padding-top: 1%;
+       position: fixed;
+       top: 65px;
+       right: 140px;
+    }
+
+
+
+
+    #BellHide>div{
+        display: flex;
+        border-bottom: 1px solid whitesmoke;
+    }
+    #BellHide>div>p,b,.fa-cog{
+        margin-top: -1px;
+        margin-right: 50px;
+        color: whitesmoke;
+    }
+    #BellHide>div>p{
+        padding-left: 18px;
+        padding-top: 18px;
+    }
+    #BellHide>div>i{
+        padding-left: 40px;
+        padding-top: 18px;
+    }
+    #BellHide>div>b{
+        margin: auto;
+        padding-top: 20px;
+    }
+    #BellHide{
+        display: none;
+        width: 220px;
+        background-color:  #212121;
+        position: fixed;
+        right: 89px;
+        top: 80px;
+    }
+</style>
+<body>
+    <div id="YouTubeBody">
+        <div id="fixedNav">
+            <div id="navBarCons">
+                <div id="MenuNav"><i class="fas fa-bars fa-2x"></i></div>
+                <div id="LogoNav"><a href=""><i class="fab fa-youtube fa-2x"><span>YouTube</span></i></a></div>
+                <div id="searchBar"><input type="text" placeholder="Search" id="nameSearch"></div>
+                <div id="searchLogo"><i class="fas fa-search fa-1x"></i></div>
+                <div id="MicroLogo"><i class="fas fa-microphone fa-1x"></i></div>
+                <div id="addLogo"><i class="far fa-plus-square fa-2x"></i></div>
+
+<!-- upload viedo click start -->
+<div id="uploadClick">
+    <div >
+        <i class="fab fa-youtube-square fa-3x"></i>
+        <p>Upload viedo</p>
+    </div>
+    <div>
+        <img src="/Practice/liveYoutubeLOGO.jpg" width="25%" height="100%" alt="">
+        <p>Go live</p>
+    </div>
+</div>
+<!-- upload viedo click end -->
+
+                <div id="appsLogo"><i class="fas fa-th fa-2x"></i></div>
+<!-- appLogoHide Start-->
+<div id="MoreAppsHide">
+    <div>
+        <i class="fas fa-tv"></i>
+        <p>You  TV</p>
+    </div>
+    <hr>
+
+    <div>
+        <i class="fas fa-play-circle"></i>
+        <p>YouTube Music</p>
+    </div>
+
+    <div>
+        <i class="fab fa-youtube-square"></i>
+        <p>YouTube Kids</p>
+    </div>
+    <hr>
+    <div>
+        <i class="fab fa-youtube"></i>
+        <p>YouTube for Artists</p>
+    </div>
+</div>
+<!-- appLogoHide end-->
+                <div id="bellIcon"><i class="far fa-bell fa-2x"></i></div>
+<!-- bell hide start -->
+<div id="BellHide">
+    <div>
+        <p>Notifications</p>
+        <i class="fas fa-cog"></i>
+        
+    </div>
+
+    <div><b>No new Notifications</b></div>
+</div>
+<!-- bell hide end -->
+                <div ><button id="profileLogo">P</button></div>
+
+                <div id="logProfile">
+                    <input type="text" placeholder="Email"><br><br>
+                    <input type="text" placeholder="pass"><br><br>
+                    <button class="subClos">submit</button>
+                    <button class="subClos" onclick="close1()">close</button>
+                </div>
+
+            </div>
+<!-- navBar Ends -->
+
+<!-- seggestBar start -->
+
+            <div id="SuggestNav">
+                <!-- <button id="allText" value="all">All</button>
+                <button id="cText" value="c programing language">#C</button>
+                <button id="musicText" value="music">Music</button>
+                <button id="drivingText" value="driving">Driving</button>
+                <button id="javascriptText" value="javascript">JavaScript</button>
+                <button id="gadgetsText" value="gadgets">Gadgets</button>
+                <button id="webSeriesText" value="webseries">Web series</button>
+                <button id="hondaText" value="honda">Honda</button>
+                <button id="comediesText" value="comedies">comedies</button>
+                <button id="computerText" value="computer science">Computer Science</button>
+                <button id="recentText" value="recently watched">Recently Watched</button>
+                <button id="newText" value="latest">New For You</button> -->
+            </div>
+        </div>
+
+        <div id="downDiv">
+            <div id="leftNav">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="35px" height="35px" viewBox="0 0 172 172"
+              style="fill: #000000">
+              <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                style="mix-blend-mode: normal">
+                <path d="M0,172v-172h172v172z" fill="none"></path>
+                <g fill="#ffffff">
+                  <path
+                    d="M86,15.0472l-78.83333,70.9528h21.5v64.5h50.16667v-43h14.33333v43h50.16667v-64.5h21.5zM86,34.33561l43,38.7028v5.79492v57.33333h-21.5v-43h-43v43h-21.5v-63.12826z">
+                  </path>
+                </g>
+              </g>
+            </svg>
+            <p>Home</p>
+                </div>
+
+                <div> <i class="far fa-compass fa-2x"></i><p>Explore</p></div>
+
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="35px" height="35px" viewBox="0 0 172 172"
+              style="fill: #000000">
+              <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                style="mix-blend-mode: normal">
+                <path d="M0,172v-172h172v172z" fill="none"></path>
+                <g fill="#ffffff">
+                  <path
+                    d="M44.075,17.2c-1.89469,0.17469 -3.29219,1.86781 -3.1175,3.7625c0.17469,1.89469 1.86781,3.29219 3.7625,3.1175h82.56c1.23625,0.01344 2.39188,-0.63156 3.02344,-1.70656c0.61813,-1.075 0.61813,-2.39187 0,-3.46687c-0.63156,-1.075 -1.78719,-1.72 -3.02344,-1.70656h-82.56c-0.1075,0 -0.215,0 -0.3225,0c-0.1075,0 -0.215,0 -0.3225,0zM26.875,30.96c-1.89469,0.17469 -3.29219,1.86781 -3.1175,3.7625c0.17469,1.89469 1.86781,3.29219 3.7625,3.1175h116.96c1.23625,0.01344 2.39188,-0.63156 3.02344,-1.70656c0.61813,-1.075 0.61813,-2.39187 0,-3.46687c-0.63156,-1.075 -1.78719,-1.72 -3.02344,-1.70656h-116.96c-0.1075,0 -0.215,0 -0.3225,0c-0.1075,0 -0.215,0 -0.3225,0zM9.675,44.72c-1.63937,0.30906 -2.82187,1.76031 -2.795,3.44v103.2c0,1.89469 1.54531,3.44 3.44,3.44h151.36c1.89469,0 3.44,-1.54531 3.44,-3.44v-103.2c0,-1.89469 -1.54531,-3.44 -3.44,-3.44h-151.36c-0.1075,0 -0.215,0 -0.3225,0c-0.1075,0 -0.215,0 -0.3225,0zM13.76,51.6h144.48v96.32h-144.48zM69.445,79.12v41.28l36.55,-20.64z">
+                  </path>
+                </g>
+              </g>
+            </svg><p>Subscriptions</p>
+                </div>
+
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="35px" height="35px" viewBox="0 0 172 172"
+              style="fill: #000000">
+              <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                style="mix-blend-mode: normal">
+                <path d="M0,172v-172h172v172z" fill="none"></path>
+                <g fill="#ffffff">
+                  <path
+                    d="M57.33333,14.33333c-7.91917,0 -14.33333,6.41417 -14.33333,14.33333v86c0,7.91917 6.41417,14.33333 14.33333,14.33333h86c7.91917,0 14.33333,-6.41417 14.33333,-14.33333v-86c0,-7.91917 -6.41417,-14.33333 -14.33333,-14.33333h-28.66667h-43zM57.33333,28.66667h14.33333v57.33333l21.5,-10.75l21.5,10.75v-57.33333h28.66667v86h-86zM86,28.66667h14.33333v34.13965l-0.75586,-0.37793l-6.41081,-3.2054l-6.41081,3.2054l-0.75586,0.37793zM14.33333,43v100.33333c0,7.88333 6.45,14.33333 14.33333,14.33333h100.33333v-14.33333h-100.33333v-100.33333z">
+                  </path>
+                </g>
+              </g>
+            </svg><p>Library</p>
+                </div>
+                
+            </div>
+<!-- left div ends -->
+<!-- content display start -->
+            <div id="ContDisplay">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script type="module">
+
+import { getData} from "./components/dataAppend.js";
+import {suggestion} from "./components/suggestion.js"
+
+var SuggestNav = document.getElementById("SuggestNav");
+SuggestNav.innerHTML = suggestion();
+var ContDisplay = document.getElementById("ContDisplay");
+
+getData("" , ContDisplay)
+
+
+let searchLogo =document.getElementById("searchLogo");
+searchLogo.onclick = () =>{
+    console.log("search")
+
+    let nameSearch = document.getElementById("nameSearch").value;
+    console.log(nameSearch);
+
+    getData(nameSearch , ContDisplay)
+}
+
+let profileLogo= document.getElementById("profileLogo");
+profileLogo.onclick = () =>{
+    console.log("here")
+    document.getElementById("logProfile").style.display = "block";
+}
+
+let addLogo = document.getElementById("addLogo");
+addLogo.onclick = () =>{
+    console.log("add")
+    document.getElementById("uploadClick").style.display = "block";
+}
+
+function close1(){
+        document.getElementById("logProfile").style.display = "none";
+        console.log("hide")
+}
+
+let appsLogo = document.getElementById("appsLogo");
+appsLogo.onclick =() =>{
+    console.log("apps")
+    document.getElementById("MoreAppsHide").style.display = "block";
+}
+
+let bellIcon = document.getElementById("bellIcon");
+bellIcon.onclick = () =>{
+    console.log("bell");
+    document.getElementById("BellHide").style.display = "block";
+}
+
+
+
+
+
+window.onclick =  (event)=>{
+  if(event.target == document.getElementById("navBarCons") || event.target == document.getElementById("SuggestNav") || event.target == document.getElementById("downDiv") ){
+    document.getElementById("BellHide").style.display = "none";
+  }
+}
+
+
+
+let allText = document.getElementById("allText");
+allText.onclick = () =>{
+    let name = document.getElementById("allText").value
+    console.log(name)
+    
+  
+    document.getElementById("allText").style.backgroundColor = "white";
+    document.getElementById("allText").style.color = "black";
+
+    document.getElementById("cText").style.backgroundColor = "#313131";
+    document.getElementById("cText").style.color = "whitesmoke";
+
+    document.getElementById("musicText").style.backgroundColor = " #313131";
+    document.getElementById("musicText").style.color = "whitesmoke";
+
+    document.getElementById("drivingText").style.backgroundColor = " #313131";
+    document.getElementById("drivingText").style.color = "whitesmoke";
+
+    document.getElementById("javascriptText").style.backgroundColor = " #313131";
+    document.getElementById("javascriptText").style.color = "whitesmoke";
+
+    document.getElementById("gadgetsText").style.backgroundColor = " #313131";
+    document.getElementById("gadgetsText").style.color = "whitesmoke";
+
+    document.getElementById("webSeriesText").style.backgroundColor = " #313131";
+    document.getElementById("webSeriesText").style.color = "whitesmoke";
+
+    document.getElementById("hondaText").style.backgroundColor = " #313131";
+    document.getElementById("hondaText").style.color = "whitesmoke";
+
+    document.getElementById("comediesText").style.backgroundColor = " #313131";
+    document.getElementById("comediesText").style.color = "whitesmoke";
+
+    document.getElementById("computerText").style.backgroundColor = " #313131";
+    document.getElementById("computerText").style.color = "whitesmoke";
+
+    document.getElementById("recentText").style.backgroundColor = " #313131";
+    document.getElementById("recentText").style.color = "whitesmoke";
+
+    document.getElementById("newText").style.backgroundColor = " #313131";
+    document.getElementById("newText").style.color = "whitesmoke";
+
+}
+
+
+let cText = document.getElementById("cText");
+cText.onclick = ()=>{
+    let name = document.getElementById("cText").value
+    console.log(name)
+
+    getData(name , ContDisplay)
+
+    document.getElementById("allText").style.backgroundColor = "#313131";
+    document.getElementById("allText").style.color = "whitesmoke";
+
+    document.getElementById("cText").style.backgroundColor = "whitesmoke";
+    document.getElementById("cText").style.color = "black";
+
+    document.getElementById("musicText").style.backgroundColor = " #313131";
+    document.getElementById("musicText").style.color = "whitesmoke";
+
+    document.getElementById("drivingText").style.backgroundColor = " #313131";
+    document.getElementById("drivingText").style.color = "whitesmoke";
+
+    document.getElementById("javascriptText").style.backgroundColor = " #313131";
+    document.getElementById("javascriptText").style.color = "whitesmoke";
+
+    document.getElementById("gadgetsText").style.backgroundColor = " #313131";
+    document.getElementById("gadgetsText").style.color = "whitesmoke";
+
+    document.getElementById("webSeriesText").style.backgroundColor = " #313131";
+    document.getElementById("webSeriesText").style.color = "whitesmoke";
+
+    document.getElementById("hondaText").style.backgroundColor = " #313131";
+    document.getElementById("hondaText").style.color = "whitesmoke";
+
+    document.getElementById("comediesText").style.backgroundColor = " #313131";
+    document.getElementById("comediesText").style.color = "whitesmoke";
+
+    document.getElementById("computerText").style.backgroundColor = " #313131";
+    document.getElementById("computerText").style.color = "whitesmoke";
+
+    document.getElementById("recentText").style.backgroundColor = " #313131";
+    document.getElementById("recentText").style.color = "whitesmoke";
+
+    document.getElementById("newText").style.backgroundColor = " #313131";
+    document.getElementById("newText").style.color = "whitesmoke";
+}
+
+let musicText = document.getElementById("musicText");
+musicText.onclick = ()=>{
+    let name = document.getElementById("musicText").value
+    console.log(name)
+
+    getData(name , ContDisplay)
+
+    document.getElementById("allText").style.backgroundColor = "#313131";
+    document.getElementById("allText").style.color = "whitesmoke";
+
+    document.getElementById("cText").style.backgroundColor = "#313131";
+    document.getElementById("cText").style.color = "whitesmoke";
+
+    document.getElementById("musicText").style.backgroundColor = " whitesmoke";
+    document.getElementById("musicText").style.color = " black";
+
+    document.getElementById("drivingText").style.backgroundColor = " #313131";
+    document.getElementById("drivingText").style.color = "whitesmoke";
+
+    document.getElementById("javascriptText").style.backgroundColor = " #313131";
+    document.getElementById("javascriptText").style.color = "whitesmoke";
+
+    document.getElementById("gadgetsText").style.backgroundColor = " #313131";
+    document.getElementById("gadgetsText").style.color = "whitesmoke";
+
+    document.getElementById("webSeriesText").style.backgroundColor = " #313131";
+    document.getElementById("webSeriesText").style.color = "whitesmoke";
+
+    document.getElementById("hondaText").style.backgroundColor = " #313131";
+    document.getElementById("hondaText").style.color = "whitesmoke";
+
+    document.getElementById("comediesText").style.backgroundColor = " #313131";
+    document.getElementById("comediesText").style.color = "whitesmoke";
+
+    document.getElementById("computerText").style.backgroundColor = " #313131";
+    document.getElementById("computerText").style.color = "whitesmoke";
+
+    document.getElementById("recentText").style.backgroundColor = " #313131";
+    document.getElementById("recentText").style.color = "whitesmoke";
+
+    document.getElementById("newText").style.backgroundColor = " #313131";
+    document.getElementById("newText").style.color = "whitesmoke";
+}
+
+let drivingText = document.getElementById("drivingText");
+drivingText.onclick = ()=>{
+    let name = document.getElementById("drivingText").value
+    console.log(name)
+
+    getData(name , ContDisplay)
+
+    document.getElementById("allText").style.backgroundColor = "#313131";
+    document.getElementById("allText").style.color = "whitesmoke";
+
+    document.getElementById("cText").style.backgroundColor = "#313131";
+    document.getElementById("cText").style.color = "whitesmoke";
+
+    document.getElementById("musicText").style.backgroundColor = " #313131";
+    document.getElementById("musicText").style.color = " whitesmoke";
+
+    document.getElementById("drivingText").style.backgroundColor = "whitesmoke ";
+    document.getElementById("drivingText").style.color = "black";
+
+    document.getElementById("javascriptText").style.backgroundColor = " #313131";
+    document.getElementById("javascriptText").style.color = "whitesmoke";
+
+    document.getElementById("gadgetsText").style.backgroundColor = " #313131";
+    document.getElementById("gadgetsText").style.color = "whitesmoke";
+
+    document.getElementById("webSeriesText").style.backgroundColor = " #313131";
+    document.getElementById("webSeriesText").style.color = "whitesmoke";
+
+    document.getElementById("hondaText").style.backgroundColor = " #313131";
+    document.getElementById("hondaText").style.color = "whitesmoke";
+
+    document.getElementById("comediesText").style.backgroundColor = " #313131";
+    document.getElementById("comediesText").style.color = "whitesmoke";
+
+    document.getElementById("computerText").style.backgroundColor = " #313131";
+    document.getElementById("computerText").style.color = "whitesmoke";
+
+    document.getElementById("recentText").style.backgroundColor = " #313131";
+    document.getElementById("recentText").style.color = "whitesmoke";
+
+    document.getElementById("newText").style.backgroundColor = " #313131";
+    document.getElementById("newText").style.color = "whitesmoke";
+}
+
+let javascriptText = document.getElementById("javascriptText");
+javascriptText.onclick = ()=>{
+    let name = document.getElementById("javascriptText").value
+    console.log(name)
+
+    getData(name , ContDisplay)
+
+    document.getElementById("allText").style.backgroundColor = "#313131";
+    document.getElementById("allText").style.color = "whitesmoke";
+
+    document.getElementById("cText").style.backgroundColor = "#313131";
+    document.getElementById("cText").style.color = "whitesmoke";
+
+    document.getElementById("musicText").style.backgroundColor = " #313131";
+    document.getElementById("musicText").style.color = " whitesmoke";
+
+    document.getElementById("drivingText").style.backgroundColor = "#313131 ";
+    document.getElementById("drivingText").style.color = "whitesmoke";
+
+    document.getElementById("javascriptText").style.backgroundColor = " whitesmoke";
+    document.getElementById("javascriptText").style.color = "black";
+
+    document.getElementById("gadgetsText").style.backgroundColor = " #313131";
+    document.getElementById("gadgetsText").style.color = "whitesmoke";
+
+    document.getElementById("webSeriesText").style.backgroundColor = " #313131";
+    document.getElementById("webSeriesText").style.color = "whitesmoke";
+
+    document.getElementById("hondaText").style.backgroundColor = " #313131";
+    document.getElementById("hondaText").style.color = "whitesmoke";
+
+    document.getElementById("comediesText").style.backgroundColor = " #313131";
+    document.getElementById("comediesText").style.color = "whitesmoke";
+
+    document.getElementById("computerText").style.backgroundColor = " #313131";
+    document.getElementById("computerText").style.color = "whitesmoke";
+
+    document.getElementById("recentText").style.backgroundColor = " #313131";
+    document.getElementById("recentText").style.color = "whitesmoke";
+
+    document.getElementById("newText").style.backgroundColor = " #313131";
+    document.getElementById("newText").style.color = "whitesmoke";
+}
+
+let gadgetsText = document.getElementById("gadgetsText");
+gadgetsText.onclick = ()=>{
+    let name = document.getElementById("gadgetsText").value
+    console.log(name)
+
+    getData(name , ContDisplay)
+
+    document.getElementById("allText").style.backgroundColor = "#313131";
+    document.getElementById("allText").style.color = "whitesmoke";
+
+    document.getElementById("cText").style.backgroundColor = "#313131";
+    document.getElementById("cText").style.color = "whitesmoke";
+
+    document.getElementById("musicText").style.backgroundColor = " #313131";
+    document.getElementById("musicText").style.color = " whitesmoke";
+
+    document.getElementById("drivingText").style.backgroundColor = "#313131 ";
+    document.getElementById("drivingText").style.color = "whitesmoke";
+
+    document.getElementById("javascriptText").style.backgroundColor = " #313131";
+    document.getElementById("javascriptText").style.color = "whitesmoke";
+
+    document.getElementById("gadgetsText").style.backgroundColor = " whitesmoke";
+    document.getElementById("gadgetsText").style.color = "black";
+
+    document.getElementById("webSeriesText").style.backgroundColor = " #313131";
+    document.getElementById("webSeriesText").style.color = "whitesmoke";
+
+    document.getElementById("hondaText").style.backgroundColor = " #313131";
+    document.getElementById("hondaText").style.color = "whitesmoke";
+
+    document.getElementById("comediesText").style.backgroundColor = " #313131";
+    document.getElementById("comediesText").style.color = "whitesmoke";
+
+    document.getElementById("computerText").style.backgroundColor = " #313131";
+    document.getElementById("computerText").style.color = "whitesmoke";
+
+    document.getElementById("recentText").style.backgroundColor = " #313131";
+    document.getElementById("recentText").style.color = "whitesmoke";
+
+    document.getElementById("newText").style.backgroundColor = " #313131";
+    document.getElementById("newText").style.color = "whitesmoke";
+}
+
+let webSeriesText = document.getElementById("webSeriesText");
+webSeriesText.onclick = ()=>{
+    let name = document.getElementById("webSeriesText").value
+    console.log(name)
+
+    getData(name , ContDisplay)
+
+    document.getElementById("allText").style.backgroundColor = "#313131";
+    document.getElementById("allText").style.color = "whitesmoke";
+
+    document.getElementById("cText").style.backgroundColor = "#313131";
+    document.getElementById("cText").style.color = "whitesmoke";
+
+    document.getElementById("musicText").style.backgroundColor = " #313131";
+    document.getElementById("musicText").style.color = " whitesmoke";
+
+    document.getElementById("drivingText").style.backgroundColor = "#313131 ";
+    document.getElementById("drivingText").style.color = "whitesmoke";
+
+    document.getElementById("javascriptText").style.backgroundColor = " #313131";
+    document.getElementById("javascriptText").style.color = "whitesmoke";
+
+    document.getElementById("gadgetsText").style.backgroundColor = " #313131";
+    document.getElementById("gadgetsText").style.color = "whitesmoke";
+
+    document.getElementById("webSeriesText").style.backgroundColor = " whitesmoke";
+    document.getElementById("webSeriesText").style.color = "black";
+
+    document.getElementById("hondaText").style.backgroundColor = " #313131";
+    document.getElementById("hondaText").style.color = "whitesmoke";
+
+    document.getElementById("comediesText").style.backgroundColor = " #313131";
+    document.getElementById("comediesText").style.color = "whitesmoke";
+
+    document.getElementById("computerText").style.backgroundColor = " #313131";
+    document.getElementById("computerText").style.color = "whitesmoke";
+
+    document.getElementById("recentText").style.backgroundColor = " #313131";
+    document.getElementById("recentText").style.color = "whitesmoke";
+
+    document.getElementById("newText").style.backgroundColor = " #313131";
+    document.getElementById("newText").style.color = "whitesmoke";
+}
+
+let hondaText = document.getElementById("hondaText");
+hondaText.onclick = ()=>{
+    let name = document.getElementById("hondaText").value
+    console.log(name)
+
+    getData(name , ContDisplay)
+
+    document.getElementById("allText").style.backgroundColor = "#313131";
+    document.getElementById("allText").style.color = "whitesmoke";
+
+    document.getElementById("cText").style.backgroundColor = "#313131";
+    document.getElementById("cText").style.color = "whitesmoke";
+
+    document.getElementById("musicText").style.backgroundColor = " #313131";
+    document.getElementById("musicText").style.color = " whitesmoke";
+
+    document.getElementById("drivingText").style.backgroundColor = "#313131 ";
+    document.getElementById("drivingText").style.color = "whitesmoke";
+
+    document.getElementById("javascriptText").style.backgroundColor = " #313131";
+    document.getElementById("javascriptText").style.color = "whitesmoke";
+
+    document.getElementById("gadgetsText").style.backgroundColor = " #313131";
+    document.getElementById("gadgetsText").style.color = "whitesmoke";
+
+    document.getElementById("webSeriesText").style.backgroundColor = " #313131";
+    document.getElementById("webSeriesText").style.color = "whitesmoke";
+
+    document.getElementById("hondaText").style.backgroundColor = " whitesmoke";
+    document.getElementById("hondaText").style.color = "black";
+
+    document.getElementById("comediesText").style.backgroundColor = " #313131";
+    document.getElementById("comediesText").style.color = "whitesmoke";
+
+    document.getElementById("computerText").style.backgroundColor = " #313131";
+    document.getElementById("computerText").style.color = "whitesmoke";
+
+    document.getElementById("recentText").style.backgroundColor = " #313131";
+    document.getElementById("recentText").style.color = "whitesmoke";
+
+    document.getElementById("newText").style.backgroundColor = " #313131";
+    document.getElementById("newText").style.color = "whitesmoke";
+}
+
+let comediesText = document.getElementById("comediesText");
+comediesText.onclick = ()=>{
+    let name = document.getElementById("comediesText").value
+    console.log(name)
+
+    getData(name , ContDisplay)
+
+    document.getElementById("allText").style.backgroundColor = "#313131";
+    document.getElementById("allText").style.color = "whitesmoke";
+
+    document.getElementById("cText").style.backgroundColor = "#313131";
+    document.getElementById("cText").style.color = "whitesmoke";
+
+    document.getElementById("musicText").style.backgroundColor = " #313131";
+    document.getElementById("musicText").style.color = " whitesmoke";
+
+    document.getElementById("drivingText").style.backgroundColor = "#313131 ";
+    document.getElementById("drivingText").style.color = "whitesmoke";
+
+    document.getElementById("javascriptText").style.backgroundColor = " #313131";
+    document.getElementById("javascriptText").style.color = "whitesmoke";
+
+    document.getElementById("gadgetsText").style.backgroundColor = " #313131";
+    document.getElementById("gadgetsText").style.color = "whitesmoke";
+
+    document.getElementById("webSeriesText").style.backgroundColor = " #313131";
+    document.getElementById("webSeriesText").style.color = "whitesmoke";
+
+    document.getElementById("hondaText").style.backgroundColor = " #313131";
+    document.getElementById("hondaText").style.color = "whitesmoke";
+
+    document.getElementById("comediesText").style.backgroundColor = " whitesmoke";
+    document.getElementById("comediesText").style.color = "#313131";
+
+    document.getElementById("computerText").style.backgroundColor = " #313131";
+    document.getElementById("computerText").style.color = "whitesmoke";
+
+    document.getElementById("recentText").style.backgroundColor = " #313131";
+    document.getElementById("recentText").style.color = "whitesmoke";
+
+    document.getElementById("newText").style.backgroundColor = " #313131";
+    document.getElementById("newText").style.color = "whitesmoke";
+}
+
+let computerText = document.getElementById("computerText");
+computerText.onclick = ()=>{
+    let name = document.getElementById("computerText").value
+    console.log(name)
+
+    getData(name , ContDisplay)
+
+    document.getElementById("allText").style.backgroundColor = "#313131";
+    document.getElementById("allText").style.color = "whitesmoke";
+
+    document.getElementById("cText").style.backgroundColor = "#313131";
+    document.getElementById("cText").style.color = "whitesmoke";
+
+    document.getElementById("musicText").style.backgroundColor = " #313131";
+    document.getElementById("musicText").style.color = " whitesmoke";
+
+    document.getElementById("drivingText").style.backgroundColor = "#313131 ";
+    document.getElementById("drivingText").style.color = "whitesmoke";
+
+    document.getElementById("javascriptText").style.backgroundColor = " #313131";
+    document.getElementById("javascriptText").style.color = "whitesmoke";
+
+    document.getElementById("gadgetsText").style.backgroundColor = " #313131";
+    document.getElementById("gadgetsText").style.color = "whitesmoke";
+
+    document.getElementById("webSeriesText").style.backgroundColor = " #313131";
+    document.getElementById("webSeriesText").style.color = "whitesmoke";
+
+    document.getElementById("hondaText").style.backgroundColor = " #313131";
+    document.getElementById("hondaText").style.color = "whitesmoke";
+
+    document.getElementById("comediesText").style.backgroundColor = " #313131";
+    document.getElementById("comediesText").style.color = "whitesmoke";
+
+    document.getElementById("computerText").style.backgroundColor = " whitesmoke";
+    document.getElementById("computerText").style.color = "#313131";
+
+    document.getElementById("recentText").style.backgroundColor = " #313131";
+    document.getElementById("recentText").style.color = "whitesmoke";
+
+    document.getElementById("newText").style.backgroundColor = " #313131";
+    document.getElementById("newText").style.color = "whitesmoke";
+}
+
+let recentText = document.getElementById("recentText");
+recentText.onclick = ()=>{
+    let name = document.getElementById("recentText").value
+    console.log(name)
+
+    getData(name , ContDisplay)
+
+    document.getElementById("allText").style.backgroundColor = "#313131";
+    document.getElementById("allText").style.color = "whitesmoke";
+
+    document.getElementById("cText").style.backgroundColor = "#313131";
+    document.getElementById("cText").style.color = "whitesmoke";
+
+    document.getElementById("musicText").style.backgroundColor = " #313131";
+    document.getElementById("musicText").style.color = " whitesmoke";
+
+    document.getElementById("drivingText").style.backgroundColor = "#313131 ";
+    document.getElementById("drivingText").style.color = "whitesmoke";
+
+    document.getElementById("javascriptText").style.backgroundColor = " #313131";
+    document.getElementById("javascriptText").style.color = "whitesmoke";
+
+    document.getElementById("gadgetsText").style.backgroundColor = " #313131";
+    document.getElementById("gadgetsText").style.color = "whitesmoke";
+
+    document.getElementById("webSeriesText").style.backgroundColor = " #313131";
+    document.getElementById("webSeriesText").style.color = "whitesmoke";
+
+    document.getElementById("hondaText").style.backgroundColor = " #313131";
+    document.getElementById("hondaText").style.color = "whitesmoke";
+
+    document.getElementById("comediesText").style.backgroundColor = " #313131";
+    document.getElementById("comediesText").style.color = "whitesmoke";
+
+    document.getElementById("computerText").style.backgroundColor = " #313131";
+    document.getElementById("computerText").style.color = "whitesmoke";
+
+    document.getElementById("recentText").style.backgroundColor = " whitesmoke";
+    document.getElementById("recentText").style.color = "#313131";
+
+    document.getElementById("newText").style.backgroundColor = " #313131";
+    document.getElementById("newText").style.color = "whitesmoke";
+}
+
+let newText = document.getElementById("newText");
+newText.onclick = ()=>{
+    let name = document.getElementById("newText").value
+    console.log(name)
+
+    getData(name , ContDisplay)
+
+    document.getElementById("allText").style.backgroundColor = "#313131";
+    document.getElementById("allText").style.color = "whitesmoke";
+
+    document.getElementById("cText").style.backgroundColor = "#313131";
+    document.getElementById("cText").style.color = "whitesmoke";
+
+    document.getElementById("musicText").style.backgroundColor = " #313131";
+    document.getElementById("musicText").style.color = " whitesmoke";
+
+    document.getElementById("drivingText").style.backgroundColor = "#313131 ";
+    document.getElementById("drivingText").style.color = "whitesmoke";
+
+    document.getElementById("javascriptText").style.backgroundColor = " #313131";
+    document.getElementById("javascriptText").style.color = "whitesmoke";
+
+    document.getElementById("gadgetsText").style.backgroundColor = " #313131";
+    document.getElementById("gadgetsText").style.color = "whitesmoke";
+
+    document.getElementById("webSeriesText").style.backgroundColor = " #313131";
+    document.getElementById("webSeriesText").style.color = "whitesmoke";
+
+    document.getElementById("hondaText").style.backgroundColor = " #313131";
+    document.getElementById("hondaText").style.color = "whitesmoke";
+
+    document.getElementById("comediesText").style.backgroundColor = " #313131";
+    document.getElementById("comediesText").style.color = "whitesmoke";
+
+    document.getElementById("computerText").style.backgroundColor = " #313131";
+    document.getElementById("computerText").style.color = "whitesmoke";
+
+    document.getElementById("recentText").style.backgroundColor = " #313131";
+    document.getElementById("recentText").style.color = "whitesmoke";
+
+    document.getElementById("newText").style.backgroundColor = " whitesmoke";
+    document.getElementById("newText").style.color = "#313131";
+}
+</script>
