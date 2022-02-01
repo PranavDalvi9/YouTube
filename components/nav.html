@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/50c60b4afa.js" crossorigin="anonymous"></script>
+</head>
+<style>
+/* navBar Styling */
+#mainCont{
+        background-color: tomato;
+        height: auto;
+    }
+
+    /* NavBar Youtube */
+    #navBar{
+        display: flex;
+        justify-content: space-between;
+        width: 98%;
+        margin: auto;
+        /* height: 5%; */
+        padding: 1%;
+       /* padding-bottom: 10%; */
+       position: fixed;
+       background-color: turquoise;
+       top: 0px;
+    }
+    /* #menu{
+        display: flex;
+        flex-direction: column;
+    }
+    #menu>button{
+        width: 7%;
+    } */
+    /* #youData{
+        display: grid;
+        grid-template-columns: repeat(4,25%);
+    } */
+ 
+
+    button{
+        border: transparent;
+        background-color: transparent;
+    }
+    #profile{
+        background-color: turquoise;
+        border-radius: 100%;
+    }
+    #search{
+        background-color: rgb(109, 106, 106);
+        
+    }
+    #logProfile{
+        display: flex;
+        flex-direction: column;
+        display: none;
+        position: fixed;
+        width: 180px;
+        height: 200px;
+        right: 28px;
+        top: 44px;
+        background-color: burlywood;
+        padding: 3%;
+    }
+
+    /* login submit */
+    .subClos{
+        background-color: black;
+        color: whitesmoke;
+    }
+
+    .subClos:hover{
+        background-color: tomato;
+    }
+
+
+    .fa-youtube{
+        color: red;
+    }
+    #YouTubeApps{
+        display: none;
+        position: fixed;
+        right: 70px;
+        width: 200px;
+        height: auto;
+        background-color: rgb(26, 25, 25);
+        /* font-size: 30px; */
+        font-weight: bold;
+        text-align: center;
+        padding: 1%;
+        /* opacity: 0.5; */
+    }
+
+    .AppsYou{
+        margin-top: 0px;
+        margin-bottom: 0px;
+        /* background-color: skyblue; */
+        padding: 3%;
+    }
+    .AppsYou:hover{
+        background-color: rgb(156, 151, 151);
+    }
+    p{
+        margin-top: 0px;
+        margin-bottom: 0px;
+        color: whitesmoke;
+    }
+    i{
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    hr{
+        margin-top: 1px;
+        margin-bottom: 1px;
+    }
+    span{
+        color: whitesmoke;
+    }
+
+    #nameSearch{
+        width: 500px;
+    }
+
+    /* navBar styling ends */
+
+</style>
+<body>
+    
+    <div id="YouTubeBody">
+
+<!-- navbar -->
+<div id="navBar">
+    <div id="navY1">
+        <!-- menu Icon -->
+        <button><i class="fas fa-bars"></i></button> 
+        <!-- YouTube Icon -->
+        <button ><i class="fab fa-youtube"></i><span>YouTube</span></button>
+    </div>
+
+    <div id="navY2">
+        <input type="text" placeholder="Search" id="nameSearch">
+        <button onclick="search()" id="search"><i class="fas fa-search"></i></button>
+        <button><i class="fas fa-microphone"></i></button>
+    </div>
+
+    <div id="navY3">
+        
+        <!-- Add icon -->
+        <button><i class="far fa-plus-square"></i></button>
+        <button id="appsYO" onclick="appsYO1()"><i class="fas fa-th"></i></button>
+        <div id="YouTubeApps">
+            <div class="AppsYou"><i class="fab fa-youtube"></i><span>YouTube</span></div><hr>
+            <div class="AppsYou"><p>YouTube Music</p></div>
+            <div class="AppsYou"><p>YouTube Kids</p></div><hr>
+            <div class="AppsYou"><p>YouTube for Artists</p></div>
+        </div>
+        <button><i class="far fa-bell"></i></button>
+        <button id="profile" onclick="profile()">P</button>
+        <div id="logProfile">
+            
+            <input type="text" placeholder="Email"><br><br>
+            <input type="text" placeholder="pass"><br><br>
+            <button class="subClos">submit</button>
+            <button class="subClos" onclick="close1()">close</button>
+        </div>
+    </div>
+</div>
+<!-- navBar Ends -->
+
+    </div>
+
+</body>
+</html>
+
+<script>
+     function profile(){
+        document.getElementById("logProfile").style.display = "block";
+        console.log("block")
+    }
+    function close1(){
+        document.getElementById("logProfile").style.display = "none";
+        console.log("hide")
+    }
+
+    function appsYO1(){
+        document.getElementById("YouTubeApps").style.display = "block"
+        console.log("here")
+    }
+</script>
