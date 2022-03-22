@@ -1,7 +1,7 @@
 
 ## Youtube Clone
 
-Check the LIVE hosted website [here](https://vibrantachintya.github.io/youtube-clone/) or check screenshots below.
+Check the LIVE hosted website [here](https://youtube-pranavdalvi9.vercel.app/) or check screenshots below.
 
 # Features
 
