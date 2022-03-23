@@ -10,7 +10,11 @@ Check the LIVE hosted website [here](https://youtube-pranavdalvi9.vercel.app/) o
 3. Watch any video you want to watch.
 4. Check recommended videos of the video you are watching.
 
+<p>Home Page<p>
 ![](https://raw.githubusercontent.com/vibrantachintya/youtube-clone/master/images/youtube_clone_ss_1.png)
+ <p>Payment Page<p>
 ![](https://raw.githubusercontent.com/vibrantachintya/youtube-clone/master/images/youtube_clone_ss_2.png)
+   <p>Payment Page<p>
 ![](https://raw.githubusercontent.com/vibrantachintya/youtube-clone/master/images/youtube_clone_ss_3.png)
+     <p>Payment Page<p>
 ![](https://raw.githubusercontent.com/vibrantachintya/youtube-clone/master/images/youtube_clone_ss_4.png)
