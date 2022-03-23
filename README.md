@@ -15,8 +15,14 @@ Home Page.
 <!-- <p>Home Page<p> -->
 ![](https://raw.githubusercontent.com/vibrantachintya/youtube-clone/master/images/youtube_clone_ss_1.png)
 <!--  <p>Payment Page<p> -->
+
+Home Page.
 ![](https://raw.githubusercontent.com/vibrantachintya/youtube-clone/master/images/youtube_clone_ss_2.png)
 <!--    <p>Payment Page<p> -->
+
+Home Page.
 ![](https://raw.githubusercontent.com/vibrantachintya/youtube-clone/master/images/youtube_clone_ss_3.png)
 <!--      <p>Payment Page<p> -->
+
+Home Page.
 ![](https://raw.githubusercontent.com/vibrantachintya/youtube-clone/master/images/youtube_clone_ss_4.png)
